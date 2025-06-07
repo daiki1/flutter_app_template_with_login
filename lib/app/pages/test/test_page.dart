@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 
 import '../../controllers/test_controller.dart';
 import '../../widgets/custom_button.dart';
-import '../../widgets/location_picker.dart';
 
+/// The TestPage is a demonstration page for testing various endpoints
 class TestPage extends StatefulWidget {
   const TestPage({super.key});
 

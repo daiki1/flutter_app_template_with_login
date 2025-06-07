@@ -3,6 +3,8 @@ import 'package:flutter_app_template_with_login/app/widgets/form_section.dart';
 
 import '../../config/app_colors.dart';
 
+/// CustomButton is a reusable button widget that can be used throughout the application.
+/// It supports primary and secondary styles, full-width options, and custom actions.
 class CustomButton extends StatelessWidget {
   final String label;
   final Future<void> Function() onPressed;

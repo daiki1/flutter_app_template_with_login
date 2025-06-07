@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 import '../../widgets/location_picker.dart';
 
+/// The LocationPage allows users to select a location
 class LocationPage extends StatefulWidget {
   const LocationPage({super.key});
 

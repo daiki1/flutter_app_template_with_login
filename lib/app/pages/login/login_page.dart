@@ -8,6 +8,7 @@ import '../../widgets/custom_button.dart';
 import '../../widgets/custom_input.dart';
 import '../../widgets/language_selector.dart';
 
+/// The LoginPage allows users to log in to the application
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 

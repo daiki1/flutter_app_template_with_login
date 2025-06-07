@@ -9,7 +9,17 @@ import '../app/controllers/auth_controller.dart';
 import '../config/app_config.dart';
 import '../models/ApiResponse.dart';
 
+/// A service class for making API requests with token management and error handling
+/// This class provides methods for sending POST and GET requests, handling token refresh, and processing responses.
 class ApiService {
+
+  /// Sends a POST request to the specified endpoint with the provided body.
+  /// Handles token management, including refreshing tokens if necessary.
+  /// Returns an ApiResponse object containing the status code, message, and data.
+  /// Handles common errors such as timeouts and socket exceptions.
+  /// @param endpoint The API endpoint to send the request to.
+  /// @param body The body of the POST request as a Map.
+  /// @return A Future<ApiResponse> containing the result of the API call.
   static Future<ApiResponse> postRequest(String endpoint, Map<String, dynamic> body) async {
     final url = Uri.parse('${AppConfig.apiBaseUrl}$endpoint');
     final currentLocale = Get.locale;
@@ -90,6 +100,13 @@ class ApiService {
     }
   }
 
+  /// Sends a GET request to the specified endpoint with optional query parameters.
+  /// Handles token management, including refreshing tokens if necessary.
+  /// Returns an ApiResponse object containing the status code, message, and data.
+  /// Handles common errors such as timeouts and socket exceptions.
+  /// @param endpoint The API endpoint to send the request to.
+  /// @param queryParams Optional query parameters to include in the request.
+  /// @return A Future<ApiResponse> containing the result of the API call.
   static Future<ApiResponse> getRequest(String endpoint, [Map<String, dynamic>? queryParams]) async {
     final uri = Uri.parse('${AppConfig.apiBaseUrl}$endpoint').replace(queryParameters: queryParams);
     final currentLocale = Get.locale;
@@ -167,6 +184,10 @@ class ApiService {
     }
   }
 
+  /// Processes the HTTP response and returns an ApiResponse object.
+  /// Handles JSON decoding and extracts the message and data from the response.
+  /// @param response The HTTP response to process.
+  /// @return An ApiResponse object containing the status code, message, and data.
   static ApiResponse _processResponse(http.Response response) {
     try {
       final responseBody = jsonDecode(response.body);
@@ -184,6 +205,10 @@ class ApiService {
     }
   }
 
+  /// Refreshes the access token using the provided refresh token.
+  /// Handles the API request and returns an ApiResponse object.
+  /// @param refreshToken The refresh token to use for refreshing the access token.
+  /// @return A Future<ApiResponse> containing the result of the token refresh operation.
   static Future<ApiResponse> refreshToken(String refreshToken) async {
     final url = Uri.parse('${AppConfig.apiBaseUrl}auth/refresh');
     final currentLocale = Get.locale;

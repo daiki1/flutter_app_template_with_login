@@ -9,6 +9,7 @@ import '../pages/login/reset_password_page.dart';
 import '../pages/login/sign_up_page.dart';
 import '../widgets/main_wrapper.dart';
 
+/// AppRoutes defines the routes for the application
 class AppRoutes {
   static const login = '/login';
   static const forgotPassword  = '/forgot-password';

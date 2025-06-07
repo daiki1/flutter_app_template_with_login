@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import '../../config/app_colors.dart';
 import 'form_section.dart';
 
+/// CustomInput is a reusable input field widget that supports text input, password visibility toggle,
+/// and validation.
 class CustomInput extends StatefulWidget {
   final String label;
   final TextEditingController controller;

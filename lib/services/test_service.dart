@@ -1,6 +1,7 @@
 import '../models/ApiResponse.dart';
 import 'api_service.dart';
 
+/// A service class for handling test-related API requests.
 class TestService {
   static Future<ApiResponse> publicEndPoint() async {
     return await ApiService.getRequest('test/all');

@@ -6,6 +6,7 @@ import '../../controllers/auth_controller.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_input.dart';
 
+/// The SignUpPage allows users to create a new account
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
 

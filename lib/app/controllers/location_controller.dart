@@ -6,6 +6,7 @@ import '../../models/state.dart';
 import '../../services/loading_service.dart';
 import '../../services/location_service.dart';
 
+/// LocationController is responsible for managing the location-related data
 class LocationController extends GetxController {
   var countries = <Country>[].obs;
   var states = <StateModel>[].obs;
@@ -29,6 +30,7 @@ class LocationController extends GetxController {
     loadCountries();
   }
 
+  /// Loads the list of countries from the LocationService.
   void loadCountries() async {
     try {
       countries.value = await LocationService.getCountries();
@@ -37,6 +39,7 @@ class LocationController extends GetxController {
     }
   }
 
+  /// Handles the selection of a country.
   void onCountrySelected(Country? country) async {
     selectedCountry.value = country;
     selectedState.value = null;
@@ -55,6 +58,7 @@ class LocationController extends GetxController {
     }
   }
 
+  /// Handles the selection of a state.
   void onStateSelected(StateModel? state) async {
     selectedState.value = state;
     selectedCity.value = null;
@@ -67,6 +71,7 @@ class LocationController extends GetxController {
     }
   }
 
+  /// Loads more cities for the selected state.
   Future<void> loadMoreCities() async {
     if (!hasMoreCities.value || selectedState.value == null) return;
 
@@ -86,6 +91,7 @@ class LocationController extends GetxController {
 
   }
 
+  /// Handles the selection of a city.
   void onCitySelected(City? city) {
     selectedCity.value = city;
   }

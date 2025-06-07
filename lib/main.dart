@@ -12,16 +12,21 @@ import 'config/app_colors.dart';
 
 var startLocale = Get.deviceLocale;
 
+/// The main entry point of the Flutter application.
 void main() async {
+  // Ensure that the Flutter engine is initialized before using GetStorage
   WidgetsFlutterBinding.ensureInitialized();
+  // Initialize GetStorage for persistent storage
   await GetStorage.init();
 
+  // Load the saved language from GetStorage or use the device locale
   final box = GetStorage();
   final savedLang = box.read('language');
   startLocale = savedLang != null
       ? Locale(savedLang.split('_')[0], savedLang.split('_')[1])
       : Get.deviceLocale ?? const Locale('en', 'US');
 
+  // Set the initial locale for the application
   Get.put(LoadingService());
 
   runApp(MyApp());
@@ -31,6 +36,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    // Set the initial locale for the application
+    // This is done here to ensure that the locale is set before the app starts
     return GetMaterialApp(
       theme: ThemeData(
         primaryColor: AppColors.primary,

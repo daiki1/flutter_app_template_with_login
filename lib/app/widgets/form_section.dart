@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
+/// A widget that provides a section for form inputs with padding
 class FormSection extends StatelessWidget {
   final Widget child;
   const FormSection({required this.child, super.key});

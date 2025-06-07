@@ -6,6 +6,7 @@ import '../../controllers/auth_controller.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_input.dart';
 
+/// The ResetPasswordPage allows users to reset their password using a code
 class ResetPasswordPage extends StatefulWidget {
   const ResetPasswordPage({super.key});
 

@@ -7,7 +7,7 @@ import '../controllers/auth_controller.dart';
 import '../routes/app_routes.dart';
 import '../widgets/language_selector.dart';
 
-
+/// The HomePage is the main page of the application
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 

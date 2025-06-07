@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 
 import '../controllers/language_controller.dart';
 
+/// A widget that allows users to select a language from a dropdown menu
+/// It uses the LanguageController to manage the current locale and available languages.
 class LanguageSelector extends StatelessWidget {
   LanguageSelector({super.key});
 

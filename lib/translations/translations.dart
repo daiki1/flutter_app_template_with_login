@@ -1,5 +1,9 @@
 import 'package:get/get.dart';
 
+/// AppTranslations is a class that extends GetX's Translations class to provide localized strings for the application.
+/// It contains translations for various UI elements and messages in both English and Spanish.
+/// It uses a map structure where the keys are language codes and the values are maps of string keys to their corresponding translations.
+/// This class is used to support internationalization (i18n) in the application, allowing it to display text in different languages based on user preferences or device settings.
 class AppTranslations extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {

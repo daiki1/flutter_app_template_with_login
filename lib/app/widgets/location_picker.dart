@@ -7,6 +7,9 @@ import '../../models/state.dart';
 import '../controllers/location_controller.dart';
 import 'custom_dropdown.dart';
 
+/// A widget that allows users to select a location (country, state, city) from dropdowns
+/// It uses the LocationController to manage the available countries, states, and cities.
+/// It provides dropdowns for selecting a country, state, and city, with search functionality and loading more items if available.
 class LocationPicker extends StatelessWidget {
   final LocationController controller = Get.put(LocationController());
   final testController = TextEditingController();

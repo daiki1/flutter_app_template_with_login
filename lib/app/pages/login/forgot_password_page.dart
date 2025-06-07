@@ -6,6 +6,7 @@ import '../../controllers/auth_controller.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_input.dart';
 
+/// The ForgotPasswordPage allows users to request a password reset
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});
 

@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 
 import '../../config/app_colors.dart';
 
+/// CustomPopup is a reusable dialog widget that displays a message with a title and a confirmation button.
+/// It can be used to show alerts, confirmations, or any other messages that require user interaction.
 class CustomPopup {
   static void show({
     required String title,

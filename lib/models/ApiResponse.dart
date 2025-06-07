@@ -1,3 +1,4 @@
+/// This file defines the ApiResponse class used for handling API responses in a Flutter application.
 class ApiResponse {
   final int statusCode;
   final String message;

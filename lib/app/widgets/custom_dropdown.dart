@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import '../../config/app_colors.dart';
 import 'form_section.dart';
 
+/// CustomDropdown is a reusable dropdown widget that supports search functionality, item loading, and custom styling.
+/// It allows users to select an item from a list, with options for searching and loading more items if available.
 class CustomDropdown<T> extends StatefulWidget {
   final String? label;
   final RxList<T> items;

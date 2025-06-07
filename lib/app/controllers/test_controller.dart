@@ -4,9 +4,11 @@ import 'package:get/get.dart';
 import '../../utils/api_helper.dart';
 import '../widgets/custom_popup.dart';
 
+/// TestController is responsible for handling API calls
 class TestController extends GetxController {
   var errorMessage = ''.obs;
 
+  /// This method is called when the controller is initialized.
   void publicEndPoint() async {
     await ApiHelper.executeApiCall(
       errorMessage: errorMessage,
@@ -20,6 +22,7 @@ class TestController extends GetxController {
     );
   }
 
+  /// This method is called when the user endpoint is accessed.
   void userEndPoint() async {
     await ApiHelper.executeApiCall(
       errorMessage: errorMessage,
@@ -33,6 +36,7 @@ class TestController extends GetxController {
     );
   }
 
+  /// This method is called when the auditor or admin endpoint is accessed.
   void auditorEndPoint() async {
     await ApiHelper.executeApiCall(
       errorMessage: errorMessage,
@@ -46,6 +50,7 @@ class TestController extends GetxController {
     );
   }
 
+  /// This method is called when the admin endpoint is accessed.
   void adminEndPoint() async {
     await ApiHelper.executeApiCall(
       errorMessage: errorMessage,
