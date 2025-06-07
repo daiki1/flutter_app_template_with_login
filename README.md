@@ -127,7 +127,16 @@ flutter run
 
 ---
 
+## Screenshots
+
+### Splash Screen
 ![Splash Screen](screenshoots/splash_screen.png)
+
+### Login Screen
 ![Login Screen](screenshoots/login_screen.png)
+
+### Home Screen
 ![Home Screen](screenshoots/home_screen.png)
+
+### Loading Screen
 ![Loading Screen](screenshoots/loading_screen.png)
